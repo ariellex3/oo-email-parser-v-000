@@ -5,5 +5,18 @@
 
 class EmailParser
   attr_accessor :email_address
+  @@all = []
+
+  def self.all
+    @@all
+  end
+
+  def save
+    self.class.all << self
+  end
+
+  def self.create
+    self.all do 
 
 end
+
